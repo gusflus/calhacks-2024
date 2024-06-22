@@ -13,8 +13,8 @@ const Navbar = () => {
         <div className="navbar-menu">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="/#/onboarding" className="nav-link nav-cta">
-                Join
+              <a href="/#/login" className="nav-link nav-cta">
+                Login
               </a>
             </li>
           </ul>
