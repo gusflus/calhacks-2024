@@ -1,9 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "../components/Navbar.tsx";
+import logo from "../logo.svg";
 
-function App() {
+const Landing = () => {
   return (
     <div className="App">
+      <Navbar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +22,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
-export default App;
+export default Landing;
