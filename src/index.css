@@ -1,13 +1,121 @@
+/* variables */
+
+:root {
+  --background-color: #f8f9fa;
+  --alternate-background-color: #005fac;
+  --trans-background-color: #f8f9fa88;
+  --primary-color: #ffcc00;
+  --secondary-color: #003366;
+  --hover-color: #003366;
+  --text-color: #f8f9fa;
+  --alternate-text-color: #e2e2e2;
+  --hover-text-color: #fff;
+  --border-radius: 0.25rem;
+}
+
+/* main */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: var(--background-color);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.35rem;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--alternate-text-color);
+}
+
+.navbar-logo {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--hover-color);
+}
+
+.nav-cta {
+  background-color: var(--secondary-color);
+  color: var(--alternate-text-color);
+  font-weight: bold;
+}
+
+.nav-cta:hover {
+  background-color: var(--hover-color);
+}
+
+/* Landing.css */
+.landing .background-image {
+  background-image: url("./assets/background.jpeg");
+  height: 100vh; /* Full height */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .title-box {
+  background-color: var(--trans-background-color);
+  text-align: center;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.landing .title-box h1 {
+  margin: 0;
+  color: var(--secondary-color);
+  size: 2rem;
+}
+
+.landing .title-box p {
+  color: var(--secondary-color);
 }

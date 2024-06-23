@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
-import "./App.css";
 
 import Landing from "./pages/Landing.tsx";
 import Login from "./pages/Login.tsx";
