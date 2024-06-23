@@ -12,18 +12,19 @@ const Login = () => {
   ];
 
   return (
-    <div className="">
+    <div className="login">
       <Navbar />
-      <div className="login">
-        <div>
+      <div className="login-content">
+        <div className="login-info">
           <h2 className="title">
             Login with your
             <br />
             Medical Provider
           </h2>
+          <p>Please select a provider from the list on the right to log in.</p>
         </div>
-        <div>
-          <p>Please select a provider to log in with:</p>
+        <div className="login-providers">
+          <h3>Select a Provider:</h3>
           <ul>
             {providers.map((provider) => (
               <li key={provider}>
