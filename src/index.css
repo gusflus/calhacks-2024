@@ -51,6 +51,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
+  z-index: 999;
 }
 
 .navbar-container {
@@ -93,8 +94,7 @@ body {
 }
 
 .nav-link:hover {
-  background-color: var(--hover-color);
-  color: var(--hover-text-color);
+  color: var(--hover-color);
 }
 
 .nav-cta {
@@ -104,8 +104,7 @@ body {
 }
 
 .nav-cta:hover {
-  background-color: var(--hover-color);
-  color: var(--hover-text-color);
+  color: var(--hover-color);
 }
 
 .nav-link:active {

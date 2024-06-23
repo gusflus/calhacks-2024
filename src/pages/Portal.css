@@ -1,0 +1,81 @@
+/* Portal.css */
+.portal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.portal-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.side-panel {
+  width: 250px;
+  background-color: var(--background-color);
+  padding: 2rem 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  overflow-y: auto;
+}
+
+.side-panel nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel nav li {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.item {
+  margin-left: 20px;
+  color: var(--secondary-color);
+}
+
+.side-panel nav button:hover {
+  color: var(--hover-text-color);
+  transition: color 0.3s;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.main-content section {
+  margin-bottom: 3rem;
+}
+
+.main-content h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .portal-content {
+    flex-direction: column;
+  }
+
+  .side-panel {
+    width: 100%;
+    padding: 1rem;
+    position: static;
+    height: auto;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}

@@ -28,7 +28,12 @@ const Login = () => {
           <ul>
             {providers.map((provider) => (
               <li key={provider}>
-                <Provider provider={provider} onClick={() => {}} />
+                <Provider
+                  provider={provider}
+                  onClick={() => {
+                    window.location.href = "/#/portal";
+                  }}
+                />
               </li>
             ))}
           </ul>

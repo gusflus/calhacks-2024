@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ logout = false }: { logout?: boolean }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -12,8 +12,11 @@ const Navbar = () => {
         <div className="navbar-menu">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="/#/login" className="nav-link nav-cta">
-                Login
+              <a
+                href={logout ? "/#/" : "/#/login"}
+                className="nav-link nav-cta"
+              >
+                {logout ? "Logout" : "Login"}
               </a>
             </li>
           </ul>
