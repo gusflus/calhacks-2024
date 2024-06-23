@@ -57,7 +57,7 @@
   background-color: var(--hover-color);
 }
 
-.nav-link:active {
-  transform: scale(0.985);
-  transition: transform 0.15s;
+.nav-item:active {
+  transform: scale(0.92);
+  transition: transform 0.3s;
 }
