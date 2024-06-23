@@ -9,6 +9,7 @@ const Timeline = ({
   setCurrentPage: (_: string) => void;
   intensity: number;
 }) => {
+  console.log("hey, intensity is ", intensity);
   const dataset = [
     {
       easy: 0,

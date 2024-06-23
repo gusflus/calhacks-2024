@@ -8,9 +8,11 @@ import { getTreatmentPlan } from '../scripts/get_treatment_plan.ts';
 
 interface TherapyPlanSelectorProps {
   treatmentOptions: TherapyPlan[];
+  setIntensity: (_: number) => void;
+  setCurrentPage: (_: string) => void;
 }
 
-const TherapyPlanSelector: React.FC<TherapyPlanSelectorProps> = ({ treatmentOptions }) => {
+const TherapyPlanSelector: React.FC<TherapyPlanSelectorProps> = ({ treatmentOptions, setIntensity, setCurrentPage }) => {
   const [currentOptions, setCurrentOptions] = useState(treatmentOptions);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showDescriptions, setShowDescriptions] = useState(true);
@@ -48,6 +50,13 @@ const TherapyPlanSelector: React.FC<TherapyPlanSelectorProps> = ({ treatmentOpti
 
   const handlePlanSelection = () => {
     console.log("Selected plan:", currentOptions[currentIndex]);
+    const iv1 = currentOptions[currentIndex].IntensityLevels[3]?.Intensity ?? 0;
+    const iv2 = currentOptions[currentIndex].IntensityLevels[2]?.Intensity ?? 0;
+    const ivu = (iv1 + iv2) / 2;
+    const iv = ivu > 5 ? Math.ceil(ivu) : Math.floor(ivu);
+    setIntensity(Math.floor((iv - 1) / 2));
+    console.log("intensity", Math.round((iv - 1) / 2));
+    setCurrentPage("section5");
   };
 
   const handleNoPlanSelection = () => {

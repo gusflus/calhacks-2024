@@ -404,14 +404,15 @@ const therapyPlans = {
 };
 
 const CustomizeRecovery = ({
-  setCurrentPage,
+  setCurrentPage, setIntensity
 }: {
   setCurrentPage: (_: string) => void;
+  setIntensity: (_: number) => void;
 }) => {
   return (
     <div>
       <h2>Choose your recovery strategy</h2>
-      <TherapyPlanSelector treatmentOptions={therapyPlans.TherapyPlans} />
+      <TherapyPlanSelector treatmentOptions={therapyPlans.TherapyPlans} setIntensity={setIntensity} setCurrentPage={setCurrentPage} />
     </div>
   );
 };

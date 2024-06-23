@@ -11,6 +11,7 @@ import Verification from "../PortalPages/Verification.tsx";
 import YourScan from "../PortalPages/YourScan.tsx";
 
 const Portal = () => {
+  const [currentIntensity, setCurrentIntensity] = useState(2);
   const [currentPage, setCurrentPage] = useState<string>("section1");
   const navItems = [
     { id: "section1", title: "Verification" },
@@ -18,7 +19,7 @@ const Portal = () => {
     { id: "section3", title: "Impact Areas" },
     { id: "section4", title: "Customize your Recovery" },
     { id: "section5", title: "Timeline" },
-    { id: "section6", title: "Check In" },
+    // { id: "section6", title: "Check In" },
   ];
 
   const getCurrentPage = () => {
@@ -30,9 +31,9 @@ const Portal = () => {
       case "section3":
         return <ImpactAreas setCurrentPage={setCurrentPage} />;
       case "section4":
-        return <CustomizeRecovery setCurrentPage={setCurrentPage} />;
+        return <CustomizeRecovery setCurrentPage={setCurrentPage} setIntensity={setCurrentIntensity} />;
       case "section5":
-        return <Timeline setCurrentPage={setCurrentPage} />;
+        return <Timeline setCurrentPage={setCurrentPage} intensity={currentIntensity} />;
       case "section6":
         return <CheckIn setCurrentPage={setCurrentPage} />;
       default:
