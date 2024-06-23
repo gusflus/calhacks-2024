@@ -3,6 +3,8 @@ import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
 import "./Portal.css";
 
+import CustomizeRecovery from "../PortalPages/CustomizeRecovery.tsx";
+import ImpactAreas from "../PortalPages/ImpactAreas.tsx";
 import Verification from "../PortalPages/Verification.tsx";
 
 const Portal = () => {
@@ -25,21 +27,9 @@ const Portal = () => {
       case "section1":
         return <Verification />;
       case "section2":
-        return (
-          <section id="section2">
-            <h2>Impact Areas</h2>
-            <p>This is the content for section 2.</p>
-            <img src="https://via.placeholder.com/400x200" alt="Placeholder" />
-          </section>
-        );
+        return <ImpactAreas />;
       case "section3":
-        return (
-          <section id="section3">
-            <h2>Section 3</h2>
-            <p>This is the content for section 3.</p>
-            <img src="https://via.placeholder.com/400x200" alt="Placeholder" />
-          </section>
-        );
+        return <CustomizeRecovery />;
       default:
         return <Verification />;
     }

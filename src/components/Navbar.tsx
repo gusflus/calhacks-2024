@@ -6,7 +6,7 @@ const Navbar = ({ logout = false }: { logout?: boolean }) => {
       <div className="navbar-container">
         <div className="navbar-brand">
           <a href="/" className="navbar-logo">
-            calhacks-2024
+            Pheonix Health
           </a>
         </div>
         <div className="navbar-menu">
