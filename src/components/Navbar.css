@@ -21,7 +21,7 @@
 .navbar-brand {
   font-size: 1.25rem;
   font-weight: bold;
-  color: var(--alternate-text-color);
+  color: var(--alternate-background-color);
 }
 
 .navbar-logo {
@@ -45,7 +45,7 @@
 }
 
 .nav-link {
-  color: var(--text-color);
+  color: var(--background-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
@@ -58,7 +58,7 @@
 
 .nav-cta {
   background-color: var(--primary-color);
-  color: var(--text-color);
+  color: var(--background-color);
   font-weight: bold;
 }
 

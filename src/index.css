@@ -6,10 +6,10 @@
   --trans-background-color: #f8f9fa88;
   --primary-color: #ff9c2d;
   --secondary-color: #0053a6;
-  --hover-color: #c75000;
-  --text-color: #f8f9fa;
-  --alternate-text-color: #e2e2e2;
-  --hover-text-color: #0053a6;
+  --hover-color: #d65e0e;
+  --text-color: #0053a6;
+  --alternate-text-color: #003682;
+  --hover-text-color: #012c89;
   --border-radius: 0.25rem;
   --footer-height: 5vh;
   --navbar-height: 3vh;
@@ -41,6 +41,14 @@ body {
 body {
   display: flex;
   flex-direction: column; /* Stack children vertically */
+}
+
+p,
+h1,
+h2,
+h3,
+span {
+  color: var(--text-color);
 }
 
 /* footer */
