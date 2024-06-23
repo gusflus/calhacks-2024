@@ -19,7 +19,7 @@ const Portal = () => {
     { id: "section3", title: "Impact Areas" },
     { id: "section4", title: "Customize your Recovery" },
     { id: "section5", title: "Timeline" },
-    // { id: "section6", title: "Check In" },
+    { id: "section6", title: "Check In" },
   ];
 
   const getCurrentPage = () => {
@@ -31,11 +31,26 @@ const Portal = () => {
       case "section3":
         return <ImpactAreas setCurrentPage={setCurrentPage} />;
       case "section4":
-        return <CustomizeRecovery setCurrentPage={setCurrentPage} setIntensity={setCurrentIntensity} />;
+        return (
+          <CustomizeRecovery
+            setCurrentPage={setCurrentPage}
+            setIntensity={setCurrentIntensity}
+          />
+        );
       case "section5":
-        return <Timeline setCurrentPage={setCurrentPage} intensity={currentIntensity} />;
+        return (
+          <Timeline
+            setCurrentPage={setCurrentPage}
+            intensity={currentIntensity}
+          />
+        );
       case "section6":
-        return <CheckIn setCurrentPage={setCurrentPage} />;
+        return (
+          <CheckIn
+            setCurrentPage={setCurrentPage}
+            intensity={currentIntensity}
+          />
+        );
       default:
         return <Verification setCurrentPage={setCurrentPage} />;
     }
