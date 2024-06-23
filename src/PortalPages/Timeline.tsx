@@ -1,4 +1,3 @@
-import { ChartsReferenceLine } from "@mui/x-charts";
 import { LineChart } from "@mui/x-charts/LineChart";
 import React from "react";
 import "./Timeline.css";
@@ -109,6 +108,10 @@ const Timeline = ({
     },
   ];
 
+  const getColors = () => {
+    return dataset.map((_, i) => (i === intensity ? "#eb9617" : "#86868655"));
+  };
+
   const valueFormatter = (value: number | null) => `${value}% recovered`;
 
   return (
@@ -134,10 +137,11 @@ const Timeline = ({
               { dataKey: "moderate", label: "moderate track", valueFormatter },
               { dataKey: "intense", label: "intense track", valueFormatter },
             ]}
+            colors={getColors()}
             width={1000}
             height={500}
           >
-            <ChartsReferenceLine
+            {/* <ChartsReferenceLine
               axisId="time"
               x={2}
               label="Week 2"
@@ -150,10 +154,8 @@ const Timeline = ({
               label="Week 5"
               labelAlign="middle"
               lineStyle={{ stroke: "blue", strokeWidth: 2 }}
-            />
+            /> */}
           </LineChart>
-
-          <p>Recovery timeline of the brain.</p>
         </div>
       </div>
       <p>
@@ -171,11 +173,6 @@ const Timeline = ({
         <li>Week 8: Patient was discharged from the hospital.</li>
       </ul>
       <br />
-      <p>
-        It is currently {new Date().toDateString()}. The patient is currently in
-        the recovery phase. The patient is expected to make a full recovery
-        within the next few months.
-      </p>
     </div>
   );
 };
