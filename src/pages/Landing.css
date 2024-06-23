@@ -1,36 +1,43 @@
-/* Landing..css */
 .landing {
+  min-height: 100vh;
+  background-color: var(--logo-subtle-color);
+  /* Light orange background */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .content {
   flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding-left: 30%;
+  /* Positions the box 30% from the left */
 }
 
-.logo {
-  max-width: 200px;
-  margin-bottom: 2rem;
+.centerBox {
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  border: 1.5px solid black;
+  padding: 30px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Optional: adds a subtle shadow */
 }
 
-.titleBox {
-  text-align: center;
-  max-width: 80%;
-}
-
-.titleBox h1 {
-  margin: 0 0 1rem;
+.centerBox h1 {
+  margin-top: 0;
+  font-size: 28px;
   color: #333;
-  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.titleBox p {
-  font-size: 1.2rem;
-  color: #666;
+.centerBox p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
 }
+
+/* You may need to adjust styles for Navbar and Footer to ensure they work well with the new layout */

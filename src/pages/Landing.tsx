@@ -1,16 +1,14 @@
 import React from "react";
-import logo from "../assets/logo-stack.png";
 import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
-import styles from "./Landing.css";
+import "./Landing.css";
 
 const Landing = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
-    <div className={styles.landing}>
+    <div className="landing">
       <Navbar />
-      <main className={styles.content}>
-        <img src={logo} alt="Phoenix Health Logo" className={styles.logo} />
-        <div className={styles.titleBox}>
+      <main className="content">
+        <div className="centerBox">
           <h1>{title}</h1>
           <p>{subtitle}</p>
         </div>
