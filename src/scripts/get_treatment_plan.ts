@@ -1,9 +1,8 @@
 import OpenAI from 'openai';
-import dotenv from 'dotenv';
 
-dotenv.config();
+import keys from './keys.json'
 
-interface ExpandableDetail {
+type ExpandableDetail = {
   Phase: string;
   Description: string;
   Intensity: number;
@@ -12,13 +11,13 @@ interface ExpandableDetail {
 }
 
 // Define an interface for each type of exercise
-interface ExerciseDetail {
+type ExerciseDetail = {
   ConciseOverview: string;
   ExpandableDetails: ExpandableDetail[];
 }
 
 // Define the interface for each therapy plan
-interface TherapyPlan {
+type TherapyPlan = {
   PlanName: string;
   Duration: string;
   Overview: string;
@@ -31,13 +30,16 @@ interface TherapyPlan {
 }
 
 // Define the InputData interface with treatmentOptions being an array of TherapyPlans
-interface InputData {
+type InputData = {
   treatmentOptions: TherapyPlan[];
   patientFeedback: string;
 }
 
+console.log(keys.key);
+
 const openai = new OpenAI({
-  apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+  apiKey: keys.key,
+  dangerouslyAllowBrowser: true
 });
 
 export const getTreatmentPlan = async (inputData: InputData): Promise<string | undefined> => {
@@ -72,3 +74,7 @@ const generatePrompt = (inputData: InputData): string => {
     Please provide JSON compromise plans that addresses the patient's concerns while adhering to the general philosophy of necessary therapy, providing different plans with varying intensity.
   `;
 };
+
+export type {
+  ExpandableDetail, ExerciseDetail, TherapyPlan, InputData
+}
