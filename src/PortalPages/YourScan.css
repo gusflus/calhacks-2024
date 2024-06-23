@@ -1,0 +1,24 @@
+/* YourScan */
+
+.your-scan img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.your-scan .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.your-scan .im-cap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
