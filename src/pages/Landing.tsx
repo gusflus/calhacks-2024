@@ -9,8 +9,8 @@ const Landing = () => {
       <Navbar />
       <div className="background-image">
         <div className="title-box">
-          <h1>Welcome to Our Website</h1>
-          <p>Your journey starts here.</p>
+          <h1>Welcome to Pheonix Health</h1>
+          <p>Your road to recovery starts here.</p>
         </div>
       </div>
       <Footer />

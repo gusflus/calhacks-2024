@@ -24,5 +24,6 @@
 }
 
 .landing .title-box p {
+  size: 2rem;
   color: var(--secondary-color);
 }
