@@ -1,0 +1,136 @@
+.therapy-plan-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+.description-toggle {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.description-toggle input {
+  margin-right: 0.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.action-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button.select-plan {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.action-button.select-plan:hover {
+  background-color: #45a049;
+}
+
+.action-button.no-plan {
+  background-color: #f44336;
+  color: white;
+}
+
+.action-button.no-plan:hover {
+  background-color: #da190b;
+}
+
+/* ... (previous styles remain the same) ... */
+
+.feedback-form {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.update-plans-button {
+  background-color: #d7c33e;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.update-plans-button:hover {
+  background-color: #d0b031;
+}
+
+.update-plans-button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
