@@ -45,6 +45,7 @@
 }
 
 .nav-link {
+  background-color: var(--primary-color);
   color: var(--background-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -53,16 +54,6 @@
 }
 
 .nav-link:hover {
-  background-color: var(--hover-color);
-}
-
-.nav-cta {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  font-weight: bold;
-}
-
-.nav-cta:hover {
   background-color: var(--hover-color);
 }
 

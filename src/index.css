@@ -6,9 +6,9 @@
   --trans-background-color: #f8f9fa88;
   --logo-subtle-color: #eeddc0;
   --primary-color: #eb9617;
-  --secondary-color: #0053a6;
+  --secondary-color: #086c69;
   --hover-color: #d65e0e;
-  --text-color: #0053a6;
+  --text-color: #086c69;
   --alternate-text-color: #003682;
   --hover-text-color: #012c89;
   --border-radius: 0.25rem;
@@ -55,25 +55,6 @@ span {
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: var(--hover-color);
-}
-
-.nav-cta {
-  background-color: var(--secondary-color);
-  color: var(--alternate-text-color);
-  font-weight: bold;
-}
-
-.nav-cta:hover {
-  color: var(--hover-color);
-}
-
-.nav-link:active {
-  transform: scale(0.985);
-  transition: transform 0.15s;
 }
 
 /* footer */

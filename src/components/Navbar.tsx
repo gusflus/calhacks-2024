@@ -16,7 +16,7 @@ const Navbar = ({ logout = false }: { logout?: boolean }) => {
         <div className="navbar-menu">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href={logout ? "/" : "/login"} className="nav-link nav-cta">
+              <a href={logout ? "/" : "/login"} className="nav-link">
                 {logout ? "Logout" : "Login"}
               </a>
             </li>
