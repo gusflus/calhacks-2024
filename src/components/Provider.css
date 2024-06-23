@@ -1,0 +1,50 @@
+/* Provider */
+
+.provider {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  padding-right: 30px;
+  border-width: 1px;
+  border-color: var(--secondary-color);
+  border-style: solid;
+}
+
+.provider .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.provider img {
+  width: 50px;
+  height: 50px;
+}
+
+.provider h3 {
+  color: var(--secondary-color);
+}
+
+.provider .arrow {
+  width: 29px;
+  height: 29px;
+}
+
+.provider:hover {
+  /* scale */
+  transform: scale(0.995);
+  transition: transform 0.2s;
+}
+
+.provider:active {
+  transform: scale(0.985);
+  transition: transform 0.2s;
+}

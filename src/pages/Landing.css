@@ -1,0 +1,28 @@
+/* Landing.css */
+.landing .background-image {
+  background-image: url("../assets/background.jpeg");
+  min-height: var(--min-height);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing .title-box {
+  background-color: var(--trans-background-color);
+  text-align: center;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.landing .title-box h1 {
+  margin: 0;
+  color: var(--secondary-color);
+  size: 2rem;
+}
+
+.landing .title-box p {
+  color: var(--secondary-color);
+}

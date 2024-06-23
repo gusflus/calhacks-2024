@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
 import Provider from "../components/Provider.tsx";
+import "./Login.css";
 
 const Login = () => {
   const providers = [
@@ -31,7 +32,7 @@ const Login = () => {
                 <Provider
                   provider={provider}
                   onClick={() => {
-                    window.location.href = "/#/portal";
+                    window.location.href = "/portal";
                   }}
                 />
               </li>

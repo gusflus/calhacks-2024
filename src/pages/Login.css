@@ -1,0 +1,50 @@
+/* Login */
+
+.login {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.login-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 2rem;
+  min-height: var(--min-height);
+}
+
+.login-info {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.login-providers {
+  flex: 1;
+  border-left: 1px solid var(--secondary-color);
+  padding-left: 2rem;
+}
+
+.title {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-info p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.login-providers h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.login-providers ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.login-providers li {
+  margin-bottom: 1rem;
+}
