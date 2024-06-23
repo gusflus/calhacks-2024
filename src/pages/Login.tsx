@@ -1,9 +1,15 @@
 import React from "react";
 import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
+import Provider from "../components/Provider.tsx";
 
 const Login = () => {
-  const providers = ["Google", "Facebook", "Twitter"];
+  const providers = [
+    "Kaiser Permanente",
+    "Dignity Health",
+    "Stanford Health",
+    "Sutter Health",
+  ];
 
   return (
     <div className="">
@@ -20,7 +26,9 @@ const Login = () => {
           <p>Please select a provider to log in with:</p>
           <ul>
             {providers.map((provider) => (
-              <li key={provider}>{provider}</li>
+              <li key={provider}>
+                <Provider provider={provider} onClick={() => {}} />
+              </li>
             ))}
           </ul>
         </div>
