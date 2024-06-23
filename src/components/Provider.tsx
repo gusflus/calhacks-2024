@@ -30,6 +30,7 @@ const Provider = ({
   const image = getImage();
 
   return (
+
     <div className="provider" onClick={handleClick}>
       <div className="info">
         <img src={image} alt="provider" />
@@ -41,6 +42,7 @@ const Provider = ({
         className="arrow"
       />
     </div>
+
   );
 };
 
