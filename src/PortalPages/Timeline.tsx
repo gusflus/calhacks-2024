@@ -4,7 +4,7 @@ import "./Timeline.css";
 
 const Timeline = ({
   setCurrentPage,
-  intensity = 0,
+  intensity = 2,
 }: {
   setCurrentPage: (_: string) => void;
   intensity: number;
@@ -108,6 +108,22 @@ const Timeline = ({
     },
   ];
 
+  //   const easy = dataset.map((d) => ({ x: d.time, y: d.easy }));
+  //   const mild = dataset.map((d) => ({ x: d.time, y: d.mild }));
+  //   const medium = dataset.map((d) => ({ x: d.time, y: d.medium }));
+  //   const moderate = dataset.map((d) => ({ x: d.time, y: d.moderate }));
+  //   const intense = dataset.map((d) => ({ x: d.time, y: d.intense }));
+
+  //   console.log(
+  //     JSON.stringify({
+  //       easy,
+  //       mild,
+  //       medium,
+  //       moderate,
+  //       intense,
+  //     })
+  //   );
+
   const getColors = () => {
     return dataset.map((_, i) => (i === intensity ? "#eb9617" : "#86868655"));
   };
@@ -117,7 +133,10 @@ const Timeline = ({
   return (
     <div className="timeline">
       <h2>Timeline</h2>
-      <p>This is a timeline of the patient's recovery.</p>
+      <p>
+        Below is a preview of the patient's projected recovery for their
+        selected track.
+      </p>
       <div className="images">
         <div className="im-cap">
           <LineChart
@@ -162,17 +181,20 @@ const Timeline = ({
         The patient has been recovering well since the stroke. The following is
         a timeline of the patient's recovery:
       </p>
-      <ul>
-        <li>Week 1: Patient was admitted to the hospital.</li>
-        <li>Week 2: Patient underwent a series of tests.</li>
-        <li>Week 3: Patient started physical therapy.</li>
-        <li>Week 4: Patient started speech therapy.</li>
-        <li>Week 5: Patient started occupational therapy.</li>
-        <li>Week 6: Patient started cognitive therapy.</li>
-        <li>Week 7: Patient started recreational therapy.</li>
-        <li>Week 8: Patient was discharged from the hospital.</li>
-      </ul>
-      <br />
+      {intensity !== 4 && (
+        <div>
+          <br />
+          <h3 style={{ color: "red", textAlign: "center" }}>
+            This recovery track is less than optimal and results in less than
+            the maximum recovery potential.
+          </h3>
+          <br />
+        </div>
+      )}
+      <p>
+        Note that the projected recovery is based on historical data and past
+        patient experiences. The actual recovery may vary.
+      </p>
     </div>
   );
 };

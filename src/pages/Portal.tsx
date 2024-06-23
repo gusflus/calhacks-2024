@@ -3,6 +3,7 @@ import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
 import "./Portal.css";
 
+import CheckIn from "../PortalPages/CheckIn.tsx";
 import CustomizeRecovery from "../PortalPages/CustomizeRecovery.tsx";
 import ImpactAreas from "../PortalPages/ImpactAreas.tsx";
 import Timeline from "../PortalPages/Timeline.tsx";
@@ -17,6 +18,7 @@ const Portal = () => {
     { id: "section3", title: "Impact Areas" },
     { id: "section4", title: "Customize your Recovery" },
     { id: "section5", title: "Timeline" },
+    { id: "section6", title: "Check In" },
   ];
 
   const getCurrentPage = () => {
@@ -31,6 +33,8 @@ const Portal = () => {
         return <CustomizeRecovery setCurrentPage={setCurrentPage} />;
       case "section5":
         return <Timeline setCurrentPage={setCurrentPage} />;
+      case "section6":
+        return <CheckIn setCurrentPage={setCurrentPage} />;
       default:
         return <Verification setCurrentPage={setCurrentPage} />;
     }
