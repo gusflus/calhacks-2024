@@ -1,7 +1,11 @@
 import React from "react";
 import "./PortalPage.css";
 
-const CustomizeRecovery = () => {
+const CustomizeRecovery = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: (_: string) => void;
+}) => {
   return (
     <div>
       <h2>Section 3</h2>

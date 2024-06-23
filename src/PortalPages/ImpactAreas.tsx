@@ -1,7 +1,11 @@
 import React from "react";
 import "./PortalPage.css";
 
-const ImpactAreas = () => {
+const ImpactAreas = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: (_: string) => void;
+}) => {
   return (
     <div>
       <h2>Impact Areas</h2>

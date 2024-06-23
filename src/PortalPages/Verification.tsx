@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import "./PortalPage.css";
 
-const Verification = () => {
+const Verification = ({
+  setCurrentPage,
+}: {
+  setCurrentPage: (_: string) => void;
+}) => {
   const [isVerified, setIsVerified] = useState(false);
 
-  const handleVerification = () => {};
+  const handleVerification = () => {
+    setCurrentPage("section2");
+  };
 
   return (
     <div>

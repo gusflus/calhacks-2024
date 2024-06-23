@@ -25,13 +25,13 @@ const Portal = () => {
   const getCurrentPage = () => {
     switch (currentPage) {
       case "section1":
-        return <Verification />;
+        return <Verification setCurrentPage={setCurrentPage} />;
       case "section2":
-        return <ImpactAreas />;
+        return <ImpactAreas setCurrentPage={setCurrentPage} />;
       case "section3":
-        return <CustomizeRecovery />;
+        return <CustomizeRecovery setCurrentPage={setCurrentPage} />;
       default:
-        return <Verification />;
+        return <Verification setCurrentPage={setCurrentPage} />;
     }
   };
 
