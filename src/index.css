@@ -4,6 +4,7 @@
   --background-color: #f8f9fa;
   --alternate-background-color: #005fac;
   --trans-background-color: #f8f9fa88;
+  --logo-subtle-color: #eeddc0;
   --primary-color: #eb9617;
   --secondary-color: #0053a6;
   --hover-color: #ed7300;
@@ -40,7 +41,8 @@ body {
 
 body {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  flex-direction: column;
+  /* Stack children vertically */
 }
 
 /* navbar */
@@ -111,6 +113,7 @@ body {
   transform: scale(0.985);
   transition: transform 0.15s;
 }
+
 /* footer */
 
 .footer {
