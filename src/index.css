@@ -74,6 +74,6 @@ span {
   padding: 0 15px;
 }
 
-.text-muted {
+.text-muted span {
   color: #6c757d;
 }
