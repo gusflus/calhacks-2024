@@ -11,7 +11,8 @@
 }
 
 .side-panel {
-  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
   background-color: var(--background-color);
   padding: 2rem 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -36,9 +37,15 @@
   color: var(--secondary-color);
 }
 
-.side-panel nav button:hover {
-  color: var(--hover-text-color);
-  transition: color 0.3s;
+.item:hover {
+  color: var(--primary-color);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.item:active {
+  transform: scale(0.95);
+  transition: transform 0.2s;
 }
 
 .main-content {

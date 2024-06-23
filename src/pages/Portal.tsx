@@ -3,8 +3,10 @@ import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
 import "./Portal.css";
 
+import CheckIn from "../PortalPages/CheckIn.tsx";
 import CustomizeRecovery from "../PortalPages/CustomizeRecovery.tsx";
 import ImpactAreas from "../PortalPages/ImpactAreas.tsx";
+import Timeline from "../PortalPages/Timeline.tsx";
 import Verification from "../PortalPages/Verification.tsx";
 import YourScan from "../PortalPages/YourScan.tsx";
 
@@ -15,6 +17,8 @@ const Portal = () => {
     { id: "section2", title: "Your Scan" },
     { id: "section3", title: "Impact Areas" },
     { id: "section4", title: "Customize your Recovery" },
+    { id: "section5", title: "Timeline" },
+    { id: "section6", title: "Check In" },
   ];
 
   const getCurrentPage = () => {
@@ -27,6 +31,10 @@ const Portal = () => {
         return <ImpactAreas setCurrentPage={setCurrentPage} />;
       case "section4":
         return <CustomizeRecovery setCurrentPage={setCurrentPage} />;
+      case "section5":
+        return <Timeline setCurrentPage={setCurrentPage} />;
+      case "section6":
+        return <CheckIn setCurrentPage={setCurrentPage} />;
       default:
         return <Verification setCurrentPage={setCurrentPage} />;
     }
@@ -41,7 +49,11 @@ const Portal = () => {
             <ul>
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <div onClick={() => setCurrentPage(item.id)} className="item">
+                  <div
+                    onClick={() => setCurrentPage(item.id)}
+                    className="item"
+                    style={currentPage === item.id ? { color: "#eb9617" } : {}}
+                  >
                     {item.title}
                   </div>
                 </li>
