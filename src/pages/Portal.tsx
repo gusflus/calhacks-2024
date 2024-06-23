@@ -6,29 +6,26 @@ import "./Portal.css";
 import CustomizeRecovery from "../PortalPages/CustomizeRecovery.tsx";
 import ImpactAreas from "../PortalPages/ImpactAreas.tsx";
 import Verification from "../PortalPages/Verification.tsx";
+import YourScan from "../PortalPages/YourScan.tsx";
 
 const Portal = () => {
   const [currentPage, setCurrentPage] = useState<string>("section1");
   const navItems = [
-    { id: "section1", title: "Your Scan" },
-    { id: "section2", title: "Impact Areas" },
-    { id: "section3", title: "Customize your Recovery" },
+    { id: "section1", title: "Verification" },
+    { id: "section2", title: "Your Scan" },
+    { id: "section3", title: "Impact Areas" },
+    { id: "section4", title: "Customize your Recovery" },
   ];
-
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const getCurrentPage = () => {
     switch (currentPage) {
       case "section1":
         return <Verification setCurrentPage={setCurrentPage} />;
       case "section2":
-        return <ImpactAreas setCurrentPage={setCurrentPage} />;
+        return <YourScan setCurrentPage={setCurrentPage} />;
       case "section3":
+        return <ImpactAreas setCurrentPage={setCurrentPage} />;
+      case "section4":
         return <CustomizeRecovery setCurrentPage={setCurrentPage} />;
       default:
         return <Verification setCurrentPage={setCurrentPage} />;
