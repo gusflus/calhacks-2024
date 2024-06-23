@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <span className="text-muted">
-          © 2024 Pheonix Health. All rights reserved.
+          © 2024 Phoenix Health. All rights reserved.
         </span>
       </div>
     </footer>

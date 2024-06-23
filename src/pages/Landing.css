@@ -1,29 +1,36 @@
-/* Landing.css */
-.landing .background-image {
-  background-image: url("../assets/background.jpeg");
-  min-height: var(--min-height);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Landing..css */
+.landing {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
-.landing .title-box {
-  background-color: var(--trans-background-color);
+.logo {
+  max-width: 200px;
+  margin-bottom: 2rem;
+}
+
+.titleBox {
   text-align: center;
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
+  max-width: 80%;
 }
 
-.landing .title-box h1 {
-  margin: 0;
-  color: var(--secondary-color);
-  size: 2rem;
+.titleBox h1 {
+  margin: 0 0 1rem;
+  color: #333;
+  font-size: 2.5rem;
 }
 
-.landing .title-box p {
-  size: 2rem;
-  color: var(--secondary-color);
+.titleBox p {
+  font-size: 1.2rem;
+  color: #666;
 }
