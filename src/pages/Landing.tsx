@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer.tsx";
 import Navbar from "../components/Navbar.tsx";
 
 const Landing = () => {
@@ -11,6 +12,7 @@ const Landing = () => {
           <p>Your journey starts here.</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
