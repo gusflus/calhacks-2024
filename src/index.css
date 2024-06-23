@@ -57,25 +57,6 @@ span {
   transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: var(--hover-color);
-}
-
-.nav-cta {
-  background-color: var(--secondary-color);
-  color: var(--alternate-text-color);
-  font-weight: bold;
-}
-
-.nav-cta:hover {
-  color: var(--hover-color);
-}
-
-.nav-link:active {
-  transform: scale(0.985);
-  transition: transform 0.15s;
-}
-
 /* footer */
 
 .footer {
