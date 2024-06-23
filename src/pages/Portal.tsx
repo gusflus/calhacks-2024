@@ -5,6 +5,7 @@ import "./Portal.css";
 
 import CustomizeRecovery from "../PortalPages/CustomizeRecovery.tsx";
 import ImpactAreas from "../PortalPages/ImpactAreas.tsx";
+import Timeline from "../PortalPages/Timeline.tsx";
 import Verification from "../PortalPages/Verification.tsx";
 import YourScan from "../PortalPages/YourScan.tsx";
 
@@ -15,6 +16,7 @@ const Portal = () => {
     { id: "section2", title: "Your Scan" },
     { id: "section3", title: "Impact Areas" },
     { id: "section4", title: "Customize your Recovery" },
+    { id: "section5", title: "Timeline" },
   ];
 
   const getCurrentPage = () => {
@@ -27,6 +29,8 @@ const Portal = () => {
         return <ImpactAreas setCurrentPage={setCurrentPage} />;
       case "section4":
         return <CustomizeRecovery setCurrentPage={setCurrentPage} />;
+      case "section5":
+        return <Timeline setCurrentPage={setCurrentPage} />;
       default:
         return <Verification setCurrentPage={setCurrentPage} />;
     }
