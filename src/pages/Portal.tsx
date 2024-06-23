@@ -41,7 +41,11 @@ const Portal = () => {
             <ul>
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <div onClick={() => setCurrentPage(item.id)} className="item">
+                  <div
+                    onClick={() => setCurrentPage(item.id)}
+                    className="item"
+                    style={currentPage === item.id ? { color: "#eb9617" } : {}}
+                  >
                     {item.title}
                   </div>
                 </li>
