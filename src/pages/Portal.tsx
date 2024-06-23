@@ -5,10 +5,9 @@ import "./Portal.css";
 
 const Portal = () => {
   const navItems = [
-    { id: "section1", title: "Section 1" },
-    { id: "section2", title: "Section 2" },
-    { id: "section3", title: "Section 3" },
-    { id: "carousel", title: "Carousel" },
+    { id: "section1", title: "Your Scan" },
+    { id: "section2", title: "Impact Areas" },
+    { id: "section3", title: "Customize your Recovery" },
   ];
 
   const scrollToSection = (id) => {
@@ -39,13 +38,18 @@ const Portal = () => {
           </nav>
         </aside>
         <main className="main-content">
+          <h1>Your Portal</h1>
           <section id="section1">
-            <h2>Section 1</h2>
-            <p>This is the content for section 1.</p>
+            <h2>Your Scan</h2>
+            <p>
+              Below is your results from your most recent MRI scan. Please
+              review the results and reach out to your provider with any
+              questions.
+            </p>
             <img src="https://via.placeholder.com/400x200" alt="Placeholder" />
           </section>
           <section id="section2">
-            <h2>Section 2</h2>
+            <h2>Impact Areas</h2>
             <p>This is the content for section 2.</p>
             <img src="https://via.placeholder.com/400x200" alt="Placeholder" />
           </section>

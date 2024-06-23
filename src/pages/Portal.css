@@ -16,7 +16,7 @@
   padding: 2rem 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   position: sticky;
-  top: 4rem;
+  top: 5rem;
   height: calc(100vh - var(--navbar-height) - var(--footer-height));
   overflow-y: auto;
 }
@@ -47,6 +47,11 @@
   overflow-y: auto;
 }
 
+h1 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
 .main-content section {
   margin-bottom: 3rem;
 }
@@ -60,6 +65,7 @@
   max-width: 100%;
   height: auto;
   margin-bottom: 1rem;
+  align-self: center;
 }
 
 /* Responsive design for smaller screens */
